@@ -7,5 +7,6 @@ from home import views
 urlpatterns = [
     path('',views.home, name='home'),
     path('contact',views.cont,name='contact'),
-    path('about',views.data,name='about')
+     path('bot',views.bot, name='bot'),
+    path('success',views.success,name='success')
 ]

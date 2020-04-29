@@ -25,16 +25,50 @@
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="/contact">Add</a>
+        <a class="nav-link" href="/contact">Join</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="/about">Data Added by you</a>
+        <a class="nav-link" href="/bot">Talk to us</a>
       </li>
     </ul>
   </div>
 </nav>
+<div>
+  <div>
+    <div style="text-align: center;">
+<h1 style="color: deepskyblue;">Welcome !</h1>
+    </div>
+    
+     {% for dest in dests %}
+    <div>
+    
+    
+      <div style="text-align: center;">
+        <div class="mx-auto" style="width: 200px;"> 
+            <span class="border border-success">
+      <div class="card" style="width: 18rem;">
+        <img src="{{dest.mimg.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{dest.name}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. {{dest.content}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">SNo : {{dest.sno}}</li>
+          <li class="list-group-item">Phone : {{dest.phone}}</li>
+          <li class="list-group-item">Email : {{dest.email}}</li>
+          
+        </ul>
+       
+      </div>
+    </span>
+      </div>
+      </div>
+    </div><br><br><br>
+     
+     {% endfor %}
 
+    <div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
